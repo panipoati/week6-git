@@ -12,3 +12,10 @@ resource "aws_lightsail_instance" "server1" {
               echo '<h1>This is deployed by Pani </h1>' | sudo tee /var/www/html/index.html
               EOF
 }
+
+resource "aws_iam_group" "ansiblegroup" {
+  name = "ansiblegroup"
+}
+resource "aws_iam_user" "ansible" {
+  name = "ansible"
+}
